@@ -1,7 +1,13 @@
 import { Button } from '@/components/ui/button';
-import { Card, CardDescription, CardTitle } from '@/components/ui/card';
+import {
+  Card,
+  CardContent,
+  CardDescription,
+  CardTitle,
+} from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
 import { Separator } from '@/components/ui/separator';
+import { GlobalLayout } from '@/components/GlobalLayout';
 import Link from 'next/link';
 
 export default function Home() {
@@ -45,83 +51,29 @@ export default function Home() {
   ];
 
   return (
-    <div className='min-h-screen bg-black text-white'>
-      {/* Header */}
-      <header className='border-b border-gray-800 bg-black/90 backdrop-blur-sm sticky top-0 z-50'>
-        <div className='max-w-7xl mx-auto px-6 py-4 flex justify-between items-center'>
-          <div className='flex items-center gap-3'>
-            <div className='w-10 h-10 border-2 border-purple-300 rounded flex items-center justify-center'>
-              <span className='text-white font-bold text-sm'>DJ</span>
-            </div>
-            <Link
-              href='/'
-              className='text-xl font-bold text-white hover:text-green-400 transition-colors'
-            >
-              Portfolio
-            </Link>
-          </div>
-          <nav className='flex gap-8'>
-            <Link
-              href='/#home'
-              className='text-purple-300 font-medium hover:text-purple-200 transition-colors'
-            >
-              Home
-            </Link>
-            <Link
-              href='/about'
-              className='text-white font-medium hover:text-purple-200 transition-colors'
-            >
-              About
-            </Link>
-            <Link
-              href='/#projects'
-              className='text-white font-medium hover:text-purple-200 transition-colors'
-            >
-              Projects
-            </Link>
-          </nav>
-          <Button
-            variant='outline'
-            size='sm'
-            className='border-gray-600 text-white hover:bg-gray-800'
-          >
-            🌙
-          </Button>
-        </div>
-      </header>
-
+    <GlobalLayout currentPage='home'>
       {/* Hero Section - Two Column Layout */}
-      <section id='home' className='py-20'>
+      <section id='home'>
         <div className='max-w-7xl mx-auto px-6'>
           <div className='grid grid-cols-1 lg:grid-cols-2 gap-16 items-center'>
             {/* Left Column - Text Content */}
-            <div className='space-y-8'>
+            <div>
               <div className='space-y-6'>
-                <h1 className='text-6xl lg:text-7xl font-bold text-white leading-tight'>
+                <h1 className='md:text-6xl text-4xl lg:text-7xl font-bold text-black dark:text-white leading-tight'>
                   It&apos;s me Domenica! ⚡
                 </h1>
-                <p className='text-xl lg:text-2xl text-gray-300 leading-relaxed max-w-2xl'>
+                <p className='md:text-xl lg:text-2xl text-gray-600 dark:text-gray-300 leading-relaxed max-w-2xl'>
                   I learn fast, build fast, and design with purpose, passionate
                   about{' '}
-                  <span className='text-purple-300 font-semibold'>
+                  <span className='dark:text-purple-300 text-purple-500 font-semibold'>
                     Design Systems
                   </span>
-                  , intuitive experiences and scalable UX. UX/UI Designer at
-                  Xtrim EC.
+                  , intuitive experiences and scalable UX.
                 </p>
               </div>
 
-              <div className='flex items-center gap-3'>
-                <span className='text-lg text-gray-300'>
-                  Crypto enthusiast and evangelist.
-                </span>
-                <div className='w-6 h-6 bg-orange-500 rounded-full flex items-center justify-center'>
-                  <span className='text-white text-xs font-bold'>₿</span>
-                </div>
-              </div>
-
               <div className='flex items-center gap-4'>
-                <span className='text-xl font-semibold text-white'>
+                <span className='text-xl font-semibold text-gray-600 dark:text-white'>
                   Domenica Jaramillo
                 </span>
                 <div className='flex gap-3'>
@@ -152,10 +104,10 @@ export default function Home() {
                 </div>
 
                 {/* Annotation */}
-                <div className='absolute -bottom-4 -left-20'>
-                  <div className='bg-white text-black px-4 py-2 rounded-lg font-medium text-sm relative'>
+                <div className='absolute -bottom-4 -left-20 hidden md:block'>
+                  <div className='dark:bg-white bg-gray-900 dark:text-black text-white px-4 py-2 rounded-lg font-medium text-sm relative'>
                     UX Designer Here
-                    <div className='absolute top-1/2 -right-2 w-0 h-0 border-l-4 border-l-white border-t-4 border-t-transparent border-b-4 border-b-transparent transform -translate-y-1/2'></div>
+                    <div className='absolute top-1/2 -right-2 w-0 h-0 border-l-4  dark:border-l-white border-l-black border-t-4 border-t-transparent border-b-4 border-b-transparent transform -translate-y-1/2'></div>
                   </div>
                 </div>
               </div>
@@ -165,11 +117,16 @@ export default function Home() {
       </section>
 
       {/* Projects Section */}
-      <section id='projects' className='py-20 bg-gray-900/50'>
+      <section
+        id='projects'
+        className='py-20 bg-gray-100/50 dark:bg-gray-900/50'
+      >
         <div className='max-w-7xl mx-auto px-6'>
           <div className='text-center mb-16'>
-            <h2 className='text-5xl font-bold mb-4 text-white'>My Projects</h2>
-            <p className='text-xl text-gray-400'>
+            <h2 className='md:text-5xl text-4xl font-bold mb-4 text-black dark:text-white'>
+              My Projects
+            </h2>
+            <p className='md:text-xl text-lg text-gray-600 dark:text-gray-400'>
               Check the latests and greatests.
             </p>
           </div>
@@ -178,11 +135,11 @@ export default function Home() {
             {projects.map((project, index) => (
               <Card
                 key={index}
-                className='group bg-gray-800 border-gray-700 hover:bg-gray-750 transition-all duration-300 overflow-hidden project-card-hover'
+                className='group bg-white dark:bg-gray-800 border-gray-200 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-750 transition-all duration-300 overflow-hidden project-card-hover'
               >
-                <div className='grid grid-cols-2'>
+                <div className='grid grid-cols-1 md:grid-cols-2'>
                   {/* Left Side - Visual */}
-                  <div className='bg-purple-600 p-6 flex flex-col justify-center items-center text-white relative overflow-hidden'>
+                  <div className='bg-purple-600 p-6 flex flex-col justify-center items-center text-white relative overflow-hidden mx-4 rounded-2xl'>
                     <div className='text-center space-y-2'>
                       <div className='text-sm font-medium opacity-80'>
                         {project.visual}
@@ -198,8 +155,8 @@ export default function Home() {
                   </div>
 
                   {/* Right Side - Content */}
-                  <div className='p-6 bg-gray-800'>
-                    <CardTitle className='text-xl text-white mb-4'>
+                  <div className='p-6 bg-white dark:bg-gray-800'>
+                    <CardTitle className='text-xl text-black dark:text-white mb-4'>
                       {project.title}
                     </CardTitle>
 
@@ -223,7 +180,7 @@ export default function Home() {
                       )}
                     </div>
 
-                    <CardDescription className='text-gray-300 mb-6 text-sm leading-relaxed'>
+                    <CardDescription className='text-gray-600 dark:text-gray-300 mb-6 text-sm leading-relaxed'>
                       {project.description}
                     </CardDescription>
 
@@ -231,7 +188,7 @@ export default function Home() {
                       <Button
                         variant='outline'
                         size='sm'
-                        className='w-full border-gray-600 text-white hover:bg-gray-700 hover:border-gray-500 transition-all duration-300'
+                        className='w-full border-gray-600 dark:border-gray-300 text-gray-600 dark:text-white hover:bg-gray-300 hover:text-gray-600 dark:hover:bg-gray-300 hover:border-gray-500 transition-all duration-300'
                       >
                         View Project
                       </Button>
@@ -245,63 +202,23 @@ export default function Home() {
       </section>
 
       {/* Contact Section */}
-      <section id='about' className='py-20'>
-        <div className='max-w-4xl mx-auto px-6 text-center'>
-          <h2 className='text-5xl font-bold mb-12 text-white'>
+      <section id='about' className='mt-12'>
+        <div className='mx-auto md:px-6 text-center'>
+          <h2 className='md:text-5xl text-4xl font-bold mb-4 md:mb-12 text-black dark:text-white'>
             Let&apos;s work together
           </h2>
 
-          <div className='mb-12'>
-            <a
-              href='mailto:domenica@example.com'
-              className='text-3xl font-semibold text-purple-300 hover:text-purple-200 transition-colors hover:scale-105 inline-block'
+          <div className='mb-8 px-4'>
+            <Link
+              target='_blank'
+              href='mailto:domejaramillo2017@hotmail.com'
+              className='md:text-3xl text-xl font-semibold dark:text-purple-300 text-purple-500 hover:text-purple-300 dark:hover:text-purple-200 transition-colors hover:scale-105 block text-center break-all leading-relaxed max-w-full'
             >
-              domenica@example.com
-            </a>
-          </div>
-
-          <Separator className='max-w-md mx-auto mb-12 bg-gray-700' />
-
-          {/* Footer with Logo and Info */}
-          <div className='flex flex-col lg:flex-row items-center justify-between gap-8'>
-            <div className='flex items-center gap-3'>
-              <div className='w-10 h-10 border-2 border-purple-300 rounded flex items-center justify-center'>
-                <span className='text-white font-bold text-sm'>DJ</span>
-              </div>
-              <div className='text-left'>
-                <h3 className='text-xl font-semibold text-white'>
-                  Domenica Jaramillo
-                </h3>
-                <p className='text-gray-400'>UX Designer & Developer</p>
-              </div>
-            </div>
-
-            <div className='text-gray-400'>
-              © 2025 Domenica Jaramillo. All rights reserved.
-            </div>
-
-            <div className='flex flex-col items-center gap-4'>
-              <div className='flex gap-4'>
-                <a
-                  href='#'
-                  className='w-10 h-10 border border-gray-600 rounded-full flex items-center justify-center text-white hover:border-purple-300 transition-colors'
-                >
-                  📷
-                </a>
-                <a
-                  href='#'
-                  className='w-10 h-10 border border-gray-600 rounded-full flex items-center justify-center text-white hover:border-purple-300 transition-colors'
-                >
-                  💼
-                </a>
-              </div>
-              <Button className='bg-green-500 hover:bg-green-600 text-white px-6 py-2'>
-                📧 Contact
-              </Button>
-            </div>
+              domejaramillo2017@hotmail.com
+            </Link>
           </div>
         </div>
       </section>
-    </div>
+    </GlobalLayout>
   );
 }
