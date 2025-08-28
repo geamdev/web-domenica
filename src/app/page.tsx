@@ -57,7 +57,7 @@ export default function Home() {
         <div className='max-w-7xl mx-auto px-6'>
           <div className='grid grid-cols-1 lg:grid-cols-2 gap-16 items-center'>
             {/* Left Column - Text Content */}
-            <div>
+            <div className='my-8'>
               <div className='space-y-6'>
                 <h1 className='md:text-6xl text-4xl lg:text-7xl font-bold text-black dark:text-white leading-tight'>
                   It&apos;s me Domenica! ⚡
