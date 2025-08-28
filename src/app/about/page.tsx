@@ -89,36 +89,149 @@ export default function AboutPage() {
           <div className='space-y-6'>
             <Card className='bg-white dark:bg-gray-800 border-gray-200 dark:border-gray-700'>
               <CardHeader>
-                <CardTitle className='text-black dark:text-white'>
-                  UX Designer - Freelance
-                </CardTitle>
-                <p className='text-gray-600 dark:text-gray-400 text-sm'>
-                  2023 - Present
-                </p>
+                <div className='flex flex-col sm:flex-row sm:items-center sm:justify-between gap-2'>
+                  <div>
+                    <CardTitle className='text-black dark:text-white text-lg'>
+                      UX Designer
+                    </CardTitle>
+                    <p className='text-purple-600 dark:text-purple-400 font-medium'>
+                      Aprehende
+                    </p>
+                  </div>
+                  <div className='text-right'>
+                    <p className='text-gray-600 dark:text-gray-400 text-sm'>
+                      Jan 2024 - Present
+                    </p>
+                    <p className='text-gray-500 dark:text-gray-500 text-xs'>
+                      Full-time · Hybrid
+                    </p>
+                    <p className='text-gray-500 dark:text-gray-500 text-xs'>
+                      Guayaquil, Ecuador
+                    </p>
+                  </div>
+                </div>
               </CardHeader>
               <CardContent>
-                <p className='text-gray-600 dark:text-gray-300'>
-                  Working with various clients to create user-centered design
-                  solutions, from wireframes to high-fidelity prototypes.
-                </p>
+                <ul className='text-gray-600 dark:text-gray-300 text-sm space-y-2'>
+                  <li className='flex items-start gap-2'>
+                    <span className='text-purple-500 mt-1'>•</span>
+                    Designed and consolidated a unified Design System in Figma,
+                    defining reusable components, typography, colors, and
+                    interaction patterns.
+                  </li>
+                  <li className='flex items-start gap-2'>
+                    <span className='text-purple-500 mt-1'>•</span>
+                    Coordinated adoption with design and development teams,
+                    balancing visual consistency with flexibility for different
+                    products.
+                  </li>
+                  <li className='flex items-start gap-2'>
+                    <span className='text-purple-500 mt-1'>•</span>
+                    Implemented documentation and maintenance workflow to ensure
+                    long-term system scalability.
+                  </li>
+                </ul>
               </CardContent>
             </Card>
 
             <Card className='bg-white dark:bg-gray-800 border-gray-200 dark:border-gray-700'>
               <CardHeader>
-                <CardTitle className='text-black dark:text-white'>
-                  UX Designer - Company Projects
-                </CardTitle>
-                <p className='text-gray-600 dark:text-gray-400 text-sm'>
-                  2022 - 2023
-                </p>
+                <div className='flex flex-col sm:flex-row sm:items-center sm:justify-between gap-2'>
+                  <div>
+                    <CardTitle className='text-black dark:text-white text-lg'>
+                      UX Designer
+                    </CardTitle>
+                    <p className='text-purple-600 dark:text-purple-400 font-medium'>
+                      Xtrim
+                    </p>
+                  </div>
+                  <div className='text-right'>
+                    <p className='text-gray-600 dark:text-gray-400 text-sm'>
+                      Jul 2023 - Dec 2024
+                    </p>
+                    <p className='text-gray-500 dark:text-gray-500 text-xs'>
+                      Training Contract · On-site
+                    </p>
+                    <p className='text-gray-500 dark:text-gray-500 text-xs'>
+                      Guayaquil, Ecuador
+                    </p>
+                  </div>
+                </div>
               </CardHeader>
               <CardContent>
-                <p className='text-gray-600 dark:text-gray-300'>
-                  Collaborated with development teams to implement design
-                  systems and improve user experience across multiple digital
-                  products.
-                </p>
+                <ul className='text-gray-600 dark:text-gray-300 text-sm space-y-2'>
+                  <li className='flex items-start gap-2'>
+                    <span className='text-purple-500 mt-1'>•</span>
+                    Redesigned the onboarding and contracting experience to make
+                    it clearer, autonomous, and step-by-step guided.
+                  </li>
+                  <li className='flex items-start gap-2'>
+                    <span className='text-purple-500 mt-1'>•</span>
+                    Implemented visual and usability improvements to reduce
+                    complexity perception.
+                  </li>
+                  <li className='flex items-start gap-2'>
+                    <span className='text-purple-500 mt-1'>•</span>
+                    Integrated secure online payment options, ensuring
+                    compliance and trust in the process.
+                  </li>
+                  <li className='flex items-start gap-2'>
+                    <span className='text-purple-500 mt-1'>•</span>
+                    Validated the solution with usability testing and real user
+                    feedback before launch.
+                  </li>
+                </ul>
+              </CardContent>
+            </Card>
+
+            <Card className='bg-white dark:bg-gray-800 border-gray-200 dark:border-gray-700'>
+              <CardHeader>
+                <div className='flex flex-col sm:flex-row sm:items-center sm:justify-between gap-2'>
+                  <div>
+                    <CardTitle className='text-black dark:text-white text-lg'>
+                      Design Lead
+                    </CardTitle>
+                    <p className='text-purple-600 dark:text-purple-400 font-medium'>
+                      Independent / Freelance
+                    </p>
+                  </div>
+                  <div className='text-right'>
+                    <p className='text-gray-600 dark:text-gray-400 text-sm'>
+                      Sep 2021 - Jun 2023
+                    </p>
+                    <p className='text-gray-500 dark:text-gray-500 text-xs'>
+                      Full-time · Remote
+                    </p>
+                    <p className='text-gray-500 dark:text-gray-500 text-xs'>
+                      Guayas, Ecuador
+                    </p>
+                  </div>
+                </div>
+              </CardHeader>
+              <CardContent>
+                <ul className='text-gray-600 dark:text-gray-300 text-sm space-y-2'>
+                  <li className='flex items-start gap-2'>
+                    <span className='text-purple-500 mt-1'>•</span>
+                    Designed and documented a unified Design System in Figma,
+                    including reusable components, typography, colors, and
+                    interaction patterns.
+                  </li>
+                  <li className='flex items-start gap-2'>
+                    <span className='text-purple-500 mt-1'>•</span>
+                    Implemented usage guidelines and best practices for design
+                    and development teams.
+                  </li>
+                  <li className='flex items-start gap-2'>
+                    <span className='text-purple-500 mt-1'>•</span>
+                    Organized adoption workshops and co-creation sessions to
+                    align expectations between UX, UI, product, and development.
+                  </li>
+                  <li className='flex items-start gap-2'>
+                    <span className='text-purple-500 mt-1'>•</span>
+                    Established a system maintenance and evolution process,
+                    ensuring scalability and consistency.
+                  </li>
+                </ul>
               </CardContent>
             </Card>
           </div>
