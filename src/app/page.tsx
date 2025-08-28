@@ -1,11 +1,5 @@
 import { Button } from '@/components/ui/button';
-import {
-  Card,
-  CardContent,
-  CardDescription,
-  CardHeader,
-  CardTitle,
-} from '@/components/ui/card';
+import { Card, CardDescription, CardTitle } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
 import { Separator } from '@/components/ui/separator';
 import Link from 'next/link';
@@ -104,7 +98,7 @@ export default function Home() {
             <div className='space-y-8'>
               <div className='space-y-6'>
                 <h1 className='text-6xl lg:text-7xl font-bold text-white leading-tight'>
-                  It's me Domenica! ⚡
+                  It&apos;s me Domenica! ⚡
                 </h1>
                 <p className='text-xl lg:text-2xl text-gray-300 leading-relaxed max-w-2xl'>
                   I learn fast, build fast, and design with purpose, passionate
@@ -254,7 +248,7 @@ export default function Home() {
       <section id='about' className='py-20'>
         <div className='max-w-4xl mx-auto px-6 text-center'>
           <h2 className='text-5xl font-bold mb-12 text-white'>
-            Let's work together
+            Let&apos;s work together
           </h2>
 
           <div className='mb-12'>

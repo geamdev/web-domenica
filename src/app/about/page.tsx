@@ -1,6 +1,5 @@
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
-import { Badge } from '@/components/ui/badge';
 import Link from 'next/link';
 
 export default function AboutPage() {
@@ -76,7 +75,7 @@ export default function AboutPage() {
           {/* Introduction */}
           <div className='mb-16'>
             <p className='text-xl text-gray-300 leading-relaxed mb-8'>
-              Hello! I'm Jaime, a passionate UX designer with a focus on
+              Hello! I&apos;m Domenica, a passionate UX designer with a focus on
               creating intuitive and engaging user experiences.
             </p>
 
@@ -85,11 +84,11 @@ export default function AboutPage() {
             </h3>
 
             <p className='text-lg text-gray-300 leading-relaxed mb-6'>
-              Great! let's continue, I believe in the power of user-centered
-              design to solve complex problems and create meaningful digital
-              experiences, with 2 years of experience in the field, I've had the
-              opportunity to work on a diverse range of projects, from mobile
-              apps to web platforms.
+              Great! let&apos;s continue, I believe in the power of
+              user-centered design to solve complex problems and create
+              meaningful digital experiences, with 2 years of experience in the
+              field, I&apos;ve had the opportunity to work on a diverse range of
+              projects, from mobile apps to web platforms.
             </p>
 
             <p className='text-lg text-gray-300 leading-relaxed mb-6'>
@@ -99,9 +98,9 @@ export default function AboutPage() {
             </p>
 
             <p className='text-lg text-gray-300 leading-relaxed'>
-              When I'm not designing, you can find me taking photos or gaming.
-              I'm always eager to learn and grow, both as a profesional and as a
-              person.
+              When I&apos;m not designing, you can find me taking photos or
+              gaming. I&apos;m always eager to learn and grow, both as a
+              profesional and as a person.
             </p>
           </div>
 
@@ -128,7 +127,7 @@ export default function AboutPage() {
             <Card className='bg-gray-800 border-gray-700 max-w-2xl mx-auto'>
               <CardHeader>
                 <CardTitle className='text-white text-center'>
-                  Bachelor's in Graphic Design
+                  Bachelor&apos;s in Graphic Design
                 </CardTitle>
               </CardHeader>
               <CardContent className='text-center'>
@@ -185,7 +184,7 @@ export default function AboutPage() {
               </div>
 
               <div className='text-gray-400 text-center lg:text-right'>
-                <p>© 2025 Jaime Freire. All rights reserved.</p>
+                <p>© 2025 Domenica Jaramillo. All rights reserved.</p>
                 <Link
                   href='/#about'
                   className='text-purple-300 hover:text-purple-200 transition-colors block mt-2'
